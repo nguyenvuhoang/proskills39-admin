@@ -1,13 +1,12 @@
-import ComponentsDashboardSales from '@/components/dashboard/components-dashboard-sales';
+import ComponentsDashboardFinance from '@/components/dashboard/components-dashboard-finance';
 import { Metadata } from 'next';
-import React from 'react';
 
 export const metadata: Metadata = {
-    title: 'Sales Admin',
+    title: 'Proskills Admin',
 };
 
-const Sales = () => {
-    return <ComponentsDashboardSales />;
+const Finance = () => {
+    return <ComponentsDashboardFinance />;
 };
 
-export default Sales;
+export default Finance;

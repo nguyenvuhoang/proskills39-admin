@@ -1,19 +1,28 @@
 'use client';
-import PanelCodeHighlight from '@/components/panel-code-highlight';
+import { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import React, { useEffect, useState } from 'react';
 
-const ComponentsChartsDonut = () => {
+type PageProps = {
+    title: string
+    data: {
+        series: number[]
+        label: string[]
+        colors: string[]
+        height: number
+    }
+}
+
+const ComponentsChartsDonut = ({ title, data }: PageProps) => {
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
         setIsMounted(true);
     }, []);
     // donutChartOptions
     const donutChart: any = {
-        series: [44, 55, 13],
+        series: data.series,
         options: {
             chart: {
-                height: 300,
+                height: data.height ,
                 type: 'donut',
                 zoom: {
                     enabled: false,
@@ -25,8 +34,8 @@ const ComponentsChartsDonut = () => {
             stroke: {
                 show: false,
             },
-            labels: ['Team A', 'Team B', 'Team C'],
-            colors: ['#4361ee', '#805dca', '#e2a03f'],
+            labels: data.label,
+            colors: data.colors,
             responsive: [
                 {
                     breakpoint: 480,
@@ -37,57 +46,52 @@ const ComponentsChartsDonut = () => {
                     },
                 },
             ],
+            plotOptions: {
+                pie: {
+                    donut: {
+                        labels: {
+                            show: true,
+                            total: {
+                                show: true,
+                                name: {
+                                    fontSize: '22px',
+                                },
+                                value: {
+                                    fontSize: '16px',
+                                },
+                                formatter: function (w: any) {
+                                    // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
+                                    return w;
+                                },
+                            },
+                        },
+                    }
+
+                },
+            },
             legend: {
-                position: 'bottom',
+                position: 'right',
             },
         },
     };
     return (
-        <PanelCodeHighlight
-            title="Basic Donut"
-            codeHighlight={`import ReactApexChart from 'react-apexcharts';
-
-{isMounted && <ReactApexChart series={donutChart.series} options={donutChart.options} className="rounded-lg bg-white dark:bg-black" type="donut" height={300} width={'100%'} />}
-
-// donutChartOptions
-const donutChart: any = {
-    series: [44, 55, 13],
-    options: {
-        chart: {
-            height: 300,
-            type: 'donut',
-            zoom: {
-                enabled: false,
-            },
-            toolbar: {
-                show: false,
-            },
-        },
-        stroke: {
-            show: false,
-        },
-        labels: ['Team A', 'Team B', 'Team C'],
-        colors: ['#4361ee', '#805dca', '#e2a03f'],
-        responsive: [
-            {
-                breakpoint: 480,
-                options: {
-                    chart: {
-                        width: 200,
-                    },
-                },
-            },
-        ],
-        legend: {
-            position: 'bottom',
-        },
-    },
-};`}
-        >
+        <div className='panel'>
+            <div className='mb-5 flex items-center justify-between'></div>
+            <h5 className="text-lg font-semibold dark:text-white-light">
+                {title}
+            </h5>
             <div className="mb-5">
-                {isMounted && <ReactApexChart series={donutChart.series} options={donutChart.options} className="rounded-lg bg-white dark:bg-black" type="donut" height={300} width={'100%'} />}
+                {isMounted &&
+                    <ReactApexChart
+                        series={donutChart.series}
+                        options={donutChart.options}
+                        className="rounded-lg bg-white dark:bg-black"
+                        type="donut"
+                        height={300}
+                        width={'100%'}
+                    />}
             </div>
-        </PanelCodeHighlight>
+        </div>
     );
 };
 
