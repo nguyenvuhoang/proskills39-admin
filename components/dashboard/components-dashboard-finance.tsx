@@ -25,6 +25,7 @@ import IconDollarSignCircle from '../icon/icon-dollar-sign-circle';
 import IconTrendingDown from '../icon/icon-trending-down';
 import ComponentsChartsDonut from '../charts/components-charts-donut';
 import ComponentsDatatablesBasic from '../datatables/components-datatables-basic';
+import ComponentsChartsBar from '../charts/components-charts-bar';
 
 const ComponentsDashboardFinance = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -443,7 +444,9 @@ const ComponentsDashboardFinance = () => {
     }
 
     const isRtl = useSelector((state: IRootState) => state.themeConfig.rtlClass) === 'rtl';
-
+    const datadash = {
+        data: [290, 115, 270, 70, 30, 330, 100]
+    }
     return (
         <div>
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -589,6 +592,14 @@ const ComponentsDashboardFinance = () => {
                     </div>
                 </div>
 
+                <div className="grid grid-cols-1 gap-6 my-5">
+                    <ComponentsChartsBar
+                        isHorizontal={false}
+                        isVertical={true}
+                        data={datadash.data}
+                        title="Revenue"
+                    />
+                </div>
 
             </div>
         </div>

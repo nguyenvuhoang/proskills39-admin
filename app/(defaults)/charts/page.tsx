@@ -48,7 +48,7 @@ const Charts = () => {
                 <ComponentsChartsArea />
                 <ComponentsChartsColumn />
                 <ComponentsChartsColumnStacked />
-                <ComponentsChartsBar />
+                <ComponentsChartsBar isHorizontal={false} isVertical={false} data={[]} title={''} />
                 <ComponentsChartsMixed />
                 <ComponentsChartsRadar />
                 <ComponentsChartsPie />
