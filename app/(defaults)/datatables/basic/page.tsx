@@ -19,7 +19,12 @@ const Basic = () => {
                     https://www.npmjs.com/package/mantine-datatable
                 </a>
             </div>
-            <ComponentsDatatablesBasic />
+            <ComponentsDatatablesBasic data={{
+                title: '',
+                pageSize: [],
+                column: [],
+                rowData: []
+            }} />
         </div>
     );
 };

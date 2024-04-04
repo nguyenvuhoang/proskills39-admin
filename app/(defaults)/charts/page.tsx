@@ -52,7 +52,12 @@ const Charts = () => {
                 <ComponentsChartsMixed />
                 <ComponentsChartsRadar />
                 <ComponentsChartsPie />
-                <ComponentsChartsDonut />
+                <ComponentsChartsDonut title={''} data={{
+                    series: [],
+                    label: [],
+                    colors: [],
+                    height: 0
+                }} />
                 <ComponentsChartsPolarArea />
                 <ComponentsChartsRadialBar />
                 <ComponentsChartsBubble />
