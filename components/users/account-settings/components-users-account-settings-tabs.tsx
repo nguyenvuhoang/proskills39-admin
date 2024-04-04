@@ -7,6 +7,7 @@ import IconLinkedin from '@/components/icon/icon-linkedin';
 import IconPhone from '@/components/icon/icon-phone';
 import IconTwitter from '@/components/icon/icon-twitter';
 import IconUser from '@/components/icon/icon-user';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const ComponentsUsersAccountSettingsTabs = () => {
@@ -66,12 +67,12 @@ const ComponentsUsersAccountSettingsTabs = () => {
                         <h6 className="mb-5 text-lg font-bold">General Information</h6>
                         <div className="flex flex-col sm:flex-row">
                             <div className="mb-5 w-full sm:w-2/12 ltr:sm:mr-4 rtl:sm:ml-4">
-                                <img src="/assets//images/profile-34.jpeg" alt="img" className="mx-auto h-20 w-20 rounded-full object-cover md:h-32 md:w-32" />
+                                <Image src="/assets/images/AnXin2.png" alt="img" className="mx-auto h-20 w-20 rounded-full object-cover md:h-32 md:w-32" width={594} height={594} />
                             </div>
                             <div className="grid flex-1 grid-cols-1 gap-5 sm:grid-cols-2">
                                 <div>
                                     <label htmlFor="name">Full Name</label>
-                                    <input id="name" type="text" placeholder="Jimmy Turner" className="form-input" />
+                                    <input id="name" type="text" placeholder="AnhBen" className="form-input" />
                                 </div>
                                 <div>
                                     <label htmlFor="profession">Profession</label>
@@ -79,8 +80,9 @@ const ComponentsUsersAccountSettingsTabs = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="country">Country</label>
-                                    <select id="country" className="form-select text-white-dark" name="country" defaultValue="United States">
+                                    <select id="country" className="form-select text-white-dark" name="country" defaultValue="Vietnamse">
                                         <option value="All Countries">All Countries</option>
+                                        <option value="Canada">Vietnamse</option>
                                         <option value="United States">United States</option>
                                         <option value="India">India</option>
                                         <option value="Japan">Japan</option>
@@ -88,11 +90,12 @@ const ComponentsUsersAccountSettingsTabs = () => {
                                         <option value="Brazil">Brazil</option>
                                         <option value="Norway">Norway</option>
                                         <option value="Canada">Canada</option>
+                                        
                                     </select>
                                 </div>
                                 <div>
                                     <label htmlFor="address">Address</label>
-                                    <input id="address" type="text" placeholder="New York" className="form-input" />
+                                    <input id="address" type="text" placeholder="HCM" className="form-input" />
                                 </div>
                                 <div>
                                     <label htmlFor="location">Location</label>
@@ -100,11 +103,11 @@ const ComponentsUsersAccountSettingsTabs = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="phone">Phone</label>
-                                    <input id="phone" type="text" placeholder="+1 (530) 555-12121" className="form-input" />
+                                    <input id="phone" type="text" placeholder="+84 (0) 888-343434" className="form-input" />
                                 </div>
                                 <div>
                                     <label htmlFor="email">Email</label>
-                                    <input id="email" type="email" placeholder="Jimmy@gmail.com" className="form-input" />
+                                    <input id="email" type="email" placeholder="nguyenvuhoangz@gmail.com" className="form-input" />
                                 </div>
                                 <div>
                                     <label htmlFor="web">Website</label>
@@ -131,25 +134,25 @@ const ComponentsUsersAccountSettingsTabs = () => {
                                 <div className="flex items-center justify-center rounded bg-[#eee] px-3 font-semibold ltr:mr-2 rtl:ml-2 dark:bg-[#1b2e4b]">
                                     <IconLinkedin className="h-5 w-5" />
                                 </div>
-                                <input type="text" placeholder="jimmy_turner" className="form-input" />
+                                <input type="text" placeholder="AnhBen" className="form-input" />
                             </div>
                             <div className="flex">
                                 <div className="flex items-center justify-center rounded bg-[#eee] px-3 font-semibold ltr:mr-2 rtl:ml-2 dark:bg-[#1b2e4b]">
                                     <IconTwitter className="h-5 w-5" />
                                 </div>
-                                <input type="text" placeholder="jimmy_turner" className="form-input" />
+                                <input type="text" placeholder="AnhBen" className="form-input" />
                             </div>
                             <div className="flex">
                                 <div className="flex items-center justify-center rounded bg-[#eee] px-3 font-semibold ltr:mr-2 rtl:ml-2 dark:bg-[#1b2e4b]">
                                     <IconFacebook className="h-5 w-5" />
                                 </div>
-                                <input type="text" placeholder="jimmy_turner" className="form-input" />
+                                <input type="text" placeholder="AnhBen" className="form-input" />
                             </div>
                             <div className="flex">
                                 <div className="flex items-center justify-center rounded bg-[#eee] px-3 font-semibold ltr:mr-2 rtl:ml-2 dark:bg-[#1b2e4b]">
                                     <IconGithub />
                                 </div>
-                                <input type="text" placeholder="jimmy_turner" className="form-input" />
+                                <input type="text" placeholder="AnhBen" className="form-input" />
                             </div>
                         </div>
                     </form>

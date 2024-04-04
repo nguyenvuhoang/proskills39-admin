@@ -44,13 +44,13 @@ const CoverLockScreen = () => {
                                     <img src="/assets/images/auth/user.png" className="w-full object-cover" alt="images" />
                                 </div>
                                 <div className="flex-1">
-                                    <h4 className="text-2xl dark:text-white">Shaun Park</h4>
+                                    <h4 className="text-2xl dark:text-white">AnhBen</h4>
                                     <p className="text-white-dark">Enter your password to unlock your ID</p>
                                 </div>
                             </div>
                             <ComponentsAuthUnlockForm />
                         </div>
-                        <p className="absolute bottom-6 w-full text-center dark:text-white">© {new Date().getFullYear()}.VRISTO All Rights Reserved.</p>
+                        <p className="absolute bottom-6 w-full text-center dark:text-white">© {new Date().getFullYear()}.vKnightHub All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

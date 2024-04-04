@@ -139,7 +139,7 @@ const contactList = [
     },
     {
         userId: 5,
-        name: 'Shaun Park',
+        name: 'AnhBen',
         path: 'profile-4.jpeg',
         time: '2:05 PM',
         preview: 'It’s not that bad...',

@@ -17,7 +17,7 @@ const ComponentsTablesCaptions = () => {
         },
         {
             id: 2,
-            name: 'Shaun Park',
+            name: 'AnhBen',
             email: 'shaunpark@gmail.com',
             date: '11/08/2020',
             sale: 400,

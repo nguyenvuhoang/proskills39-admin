@@ -762,7 +762,7 @@ const ComponentsDashboardSales = () => {
                                             SP
                                         </span>
                                         <div className="flex-1 px-3">
-                                            <div>Shaun Park</div>
+                                            <div>AnhBen</div>
                                             <div className="text-xs text-white-dark dark:text-gray-500">10 Jan 1:00PM</div>
                                         </div>
                                         <span className="whitespace-pre px-1 text-base text-success ltr:ml-auto rtl:mr-auto">+$36.11</span>

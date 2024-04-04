@@ -24,6 +24,7 @@ import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { useSelector } from 'react-redux';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import Image from 'next/image';
 
 const ComponentsDashboardAnalytics = () => {
     const isDark = useSelector((state: IRootState) => state.themeConfig.theme === 'dark' || state.themeConfig.isDarkMode);
@@ -543,7 +544,7 @@ const ComponentsDashboardAnalytics = () => {
                                         <h5 className="font-semibold dark:text-white-light">
                                             New project created :{' '}
                                             <button type="button" className="text-success">
-                                                [VRISTO Admin Template]
+                                                [vKnightHub Admin Template]
                                             </button>
                                         </h5>
                                         <p className="text-xs text-white-dark">27 Feb, 2020</p>
@@ -747,10 +748,10 @@ const ComponentsDashboardAnalytics = () => {
                     <div className="panel h-full">
                         <div className="-m-5 mb-5 flex  items-start border-b border-white-light p-5 dark:border-[#1b2e4b]">
                             <div className="shrink-0 rounded-full ring-2 ring-white-light ltr:mr-4 rtl:ml-4 dark:ring-dark">
-                                <img src="/assets/images/profile-1.jpeg" alt="profile1" className="h-10 w-10 rounded-full object-cover" />
+                                <Image src="/assets/images/AnXin2.png" alt="profile1" className="h-10 w-10 rounded-full object-cover" width={10} height={10} />
                             </div>
                             <div className="font-semibold">
-                                <h6>Jimmy Turner</h6>
+                                <h6>AnhBen</h6>
                                 <p className="mt-1 text-xs text-white-dark">Monday, Nov 18</p>
                             </div>
                         </div>

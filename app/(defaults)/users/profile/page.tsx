@@ -13,6 +13,7 @@ import IconTag from '@/components/icon/icon-tag';
 import IconTwitter from '@/components/icon/icon-twitter';
 import ComponentsUsersProfilePaymentHistory from '@/components/users/profile/components-users-profile-payment-history';
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -44,8 +45,8 @@ const Profile = () => {
                         </div>
                         <div className="mb-5">
                             <div className="flex flex-col items-center justify-center">
-                                <img src="/assets/images/profile-34.jpeg" alt="img" className="mb-5 h-24 w-24 rounded-full  object-cover" />
-                                <p className="text-xl font-semibold text-primary">Jimmy Turner</p>
+                                <Image src="/assets/images/AnXin2.png" alt="img" className="mb-5 h-24 w-24 rounded-full  object-cover" width={594} height={594} />
+                                <p className="text-xl font-semibold text-primary">AnhBen</p>
                             </div>
                             <ul className="m-auto mt-5 flex max-w-[160px] flex-col space-y-4 font-semibold text-white-dark">
                                 <li className="flex items-center gap-2">
@@ -53,22 +54,22 @@ const Profile = () => {
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <IconCalendar className="shrink-0" />
-                                    Jan 20, 1989
+                                    Aug 03, 1994
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <IconMapPin className="shrink-0" />
-                                    New York, USA
+                                    HCM, Vietnamese
                                 </li>
                                 <li>
                                     <button className="flex items-center gap-2">
                                         <IconMail className="h-5 w-5 shrink-0" />
-                                        <span className="truncate text-primary">jimmy@gmail.com</span>
+                                        <span className="truncate text-primary">nguyenvuhoangz@gmail.com</span>
                                     </button>
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <IconPhone />
                                     <span className="whitespace-nowrap" dir="ltr">
-                                        +1 (530) 555-12121
+                                        +84 (0) 388-412312
                                     </span>
                                 </li>
                             </ul>
