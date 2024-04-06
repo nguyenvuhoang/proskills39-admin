@@ -45,10 +45,10 @@ const Charts = () => {
                 </div>
 
                 <ComponentsChartsLine />
-                <ComponentsChartsArea title={''} />
+                <ComponentsChartsArea title={''} data={[]} labels={[]} chartname={''} />
                 <ComponentsChartsColumn />
                 <ComponentsChartsColumnStacked />
-                <ComponentsChartsBar isHorizontal={false} isVertical={false} data={[]} title={''} />
+                <ComponentsChartsBar isHorizontal={false} isVertical={false} data={[]} title={''} categories={[]} />
                 <ComponentsChartsMixed />
                 <ComponentsChartsRadar />
                 <ComponentsChartsPie />
