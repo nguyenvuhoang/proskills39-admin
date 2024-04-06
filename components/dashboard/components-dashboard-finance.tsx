@@ -1,31 +1,17 @@
 'use client';
 import Dropdown from '@/components/dropdown';
-import IconBinance from '@/components/icon/icon-binance';
-import IconBitcoin from '@/components/icon/icon-bitcoin';
-import IconCircleCheck from '@/components/icon/icon-circle-check';
-import IconEthereum from '@/components/icon/icon-ethereum';
-import IconEye from '@/components/icon/icon-eye';
-import IconHorizontalDots from '@/components/icon/icon-horizontal-dots';
-import IconInfoCircle from '@/components/icon/icon-info-circle';
-import IconLitecoin from '@/components/icon/icon-litecoin';
-import IconSolana from '@/components/icon/icon-solana';
-import IconTether from '@/components/icon/icon-tether';
 import { IRootState } from '@/store';
 import { useEffect, useState } from 'react';
-import ReactApexChart from 'react-apexcharts';
 import { useSelector } from 'react-redux';
-import IconCaretDown from '../icon/icon-caret-down';
-import Image from 'next/image';
-import IconPlusCircle from '../icon/icon-plus-circle';
-import IconUserPlus from '../icon/icon-user-plus';
-import IconUser from '../icon/icon-user';
-import IconTrendingUp from '../icon/icon-trending-up';
-import IconMenuScrumboard from '../icon/menu/icon-menu-scrumboard';
-import IconDollarSignCircle from '../icon/icon-dollar-sign-circle';
-import IconTrendingDown from '../icon/icon-trending-down';
+import ComponentsChartsBar from '../charts/components-charts-bar';
 import ComponentsChartsDonut from '../charts/components-charts-donut';
 import ComponentsDatatablesBasic from '../datatables/components-datatables-basic';
-import ComponentsChartsBar from '../charts/components-charts-bar';
+import IconCaretDown from '../icon/icon-caret-down';
+import IconDollarSignCircle from '../icon/icon-dollar-sign-circle';
+import IconTrendingDown from '../icon/icon-trending-down';
+import IconTrendingUp from '../icon/icon-trending-up';
+import IconUser from '../icon/icon-user';
+import IconMenuScrumboard from '../icon/menu/icon-menu-scrumboard';
 
 const ComponentsDashboardFinance = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -33,384 +19,71 @@ const ComponentsDashboardFinance = () => {
         setIsMounted(true);
     }, []);
 
-    //bitcoinoption
-    const bitcoin: any = {
-        series: [
-            {
-                data: [21, 9, 36, 12, 44, 25, 59, 41, 25, 66],
-            },
-        ],
-        options: {
-            chart: {
-                height: 45,
-                type: 'line',
-                sparkline: {
-                    enabled: true,
-                },
-            },
-            stroke: {
-                width: 2,
-            },
-            markers: {
-                size: 0,
-            },
-            colors: ['#00ab55'],
-            grid: {
-                padding: {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                },
-            },
-            tooltip: {
-                x: {
-                    show: false,
-                },
-                y: {
-                    title: {
-                        formatter: () => {
-                            return '';
-                        },
-                    },
-                },
-            },
-            responsive: [
-                {
-                    breakPoint: 576,
-                    options: {
-                        chart: {
-                            height: 95,
-                        },
-                        grid: {
-                            padding: {
-                                top: 45,
-                                bottom: 0,
-                                left: 0,
-                            },
-                        },
-                    },
-                },
-            ],
-        },
-    };
-
-    //ethereumoption
-    const ethereum: any = {
-        series: [
-            {
-                data: [44, 25, 59, 41, 66, 25, 21, 9, 36, 12],
-            },
-        ],
-        options: {
-            chart: {
-                height: 45,
-                type: 'line',
-                sparkline: {
-                    enabled: true,
-                },
-            },
-            stroke: {
-                width: 2,
-            },
-            markers: {
-                size: 0,
-            },
-            colors: ['#e7515a'],
-            grid: {
-                padding: {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                },
-            },
-            tooltip: {
-                x: {
-                    show: false,
-                },
-                y: {
-                    title: {
-                        formatter: () => {
-                            return '';
-                        },
-                    },
-                },
-            },
-            responsive: [
-                {
-                    breakPoint: 576,
-                    options: {
-                        chart: {
-                            height: 95,
-                        },
-                        grid: {
-                            padding: {
-                                top: 45,
-                                bottom: 0,
-                                left: 0,
-                            },
-                        },
-                    },
-                },
-            ],
-        },
-    };
-
-    //litecoinoption
-    const litecoin: any = {
-        series: [
-            {
-                data: [9, 21, 36, 12, 66, 25, 44, 25, 41, 59],
-            },
-        ],
-        options: {
-            chart: {
-                height: 45,
-                type: 'line',
-                sparkline: {
-                    enabled: true,
-                },
-            },
-            stroke: {
-                width: 2,
-            },
-            markers: {
-                size: 0,
-            },
-            colors: ['#00ab55'],
-            grid: {
-                padding: {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                },
-            },
-            tooltip: {
-                x: {
-                    show: false,
-                },
-                y: {
-                    title: {
-                        formatter: () => {
-                            return '';
-                        },
-                    },
-                },
-            },
-            responsive: [
-                {
-                    breakPoint: 576,
-                    options: {
-                        chart: {
-                            height: 95,
-                        },
-                        grid: {
-                            padding: {
-                                top: 45,
-                                bottom: 0,
-                                left: 0,
-                            },
-                        },
-                    },
-                },
-            ],
-        },
-    };
-
-    //binanceoption
-    const binance: any = {
-        series: [
-            {
-                data: [25, 44, 25, 59, 41, 21, 36, 12, 19, 9],
-            },
-        ],
-        options: {
-            chart: {
-                height: 45,
-                type: 'line',
-                sparkline: {
-                    enabled: true,
-                },
-            },
-            stroke: {
-                width: 2,
-            },
-            markers: {
-                size: 0,
-            },
-            colors: ['#e7515a'],
-            grid: {
-                padding: {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                },
-            },
-            tooltip: {
-                x: {
-                    show: false,
-                },
-                y: {
-                    title: {
-                        formatter: () => {
-                            return '';
-                        },
-                    },
-                },
-            },
-            responsive: [
-                {
-                    breakPoint: 576,
-                    options: {
-                        chart: {
-                            height: 95,
-                        },
-                        grid: {
-                            padding: {
-                                top: 45,
-                                bottom: 0,
-                                left: 0,
-                            },
-                        },
-                    },
-                },
-            ],
-        },
-    };
-
-    //tetheroption
-    const tether: any = {
-        series: [
-            {
-                data: [21, 59, 41, 44, 25, 66, 9, 36, 25, 12],
-            },
-        ],
-        options: {
-            chart: {
-                height: 45,
-                type: 'line',
-                sparkline: {
-                    enabled: true,
-                },
-            },
-            stroke: {
-                width: 2,
-            },
-            markers: {
-                size: 0,
-            },
-            colors: ['#00ab55'],
-            grid: {
-                padding: {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                },
-            },
-            tooltip: {
-                x: {
-                    show: false,
-                },
-                y: {
-                    title: {
-                        formatter: () => {
-                            return '';
-                        },
-                    },
-                },
-            },
-            responsive: [
-                {
-                    breakPoint: 576,
-                    options: {
-                        chart: {
-                            height: 95,
-                        },
-                        grid: {
-                            padding: {
-                                top: 45,
-                                bottom: 0,
-                                left: 0,
-                            },
-                        },
-                    },
-                },
-            ],
-        },
-    };
-
-    //solanaoption
-    const solana: any = {
-        series: [
-            {
-                data: [21, -9, 36, -12, 44, 25, 59, -41, 66, -25],
-            },
-        ],
-        options: {
-            chart: {
-                height: 45,
-                type: 'line',
-                sparkline: {
-                    enabled: true,
-                },
-            },
-            stroke: {
-                width: 2,
-            },
-            markers: {
-                size: 0,
-            },
-            colors: ['#e7515a'],
-            grid: {
-                padding: {
-                    top: 0,
-                    bottom: 0,
-                    left: 0,
-                },
-            },
-            tooltip: {
-                x: {
-                    show: false,
-                },
-                y: {
-                    title: {
-                        formatter: () => {
-                            return '';
-                        },
-                    },
-                },
-            },
-            responsive: [
-                {
-                    breakPoint: 576,
-                    options: {
-                        chart: {
-                            height: 95,
-                        },
-                        grid: {
-                            padding: {
-                                top: 45,
-                                bottom: 0,
-                                left: 0,
-                            },
-                        },
-                    },
-                },
-            ],
-        },
-    };
 
     const dataUserOverview = {
         series: [60, 40],
         label: ['Freelancer', 'Client'],
         colors: ['#1DC52E', '#2961CD'],
-        height: 200
+        height: 200,
+        total: 100,
+        totallable: "Total User"
+    }
+
+    const dataRevenuebyfreelancerlevel
+        = {
+        series: [325, 681, 681, 325, 325],
+        label: [
+            'New expert',
+            'Vip certified expert',
+            'Pro expert',
+            'Pro + Expert',
+            'Rising talent'
+        ],
+        colors: ['#1DC52E', '#F3C41E', '#710886', '#EE5050', '#5CC8F2'],
+        height: 200,
+        total: 2012,
+        totallable: "Total revenue"
+    }
+
+    const dataRevenuebycategories = {
+        series: [17, 12, 8, 11, 9, 17, 11, 5, 8, 2],
+        label: [
+            'Programming & Tech',
+            'Video & Animation',
+            'Graphics & Design',
+            'Digital Marketing',
+            'Writing & Translation',
+            'Lifestyle',
+            'Business',
+            'Music & Audio',
+            'Trending',
+            'AI Services'
+        ],
+        colors: [
+            '#2961CD',
+            '#5CC8F2',
+            '#1DC52E',
+            '#EE5050',
+            '#DD914A',
+            '#710886',
+            '#072C75',
+            '#D1DFFA',
+            '#F3C41E',
+            '#A5A7AF'
+
+        ],
+        height: 200,
+        total: 100,
+        totallable: "Total revenue"
     }
 
     const dataRevenuebyorders = {
         series: [20, 40, 40],
         label: ['Dispute', 'Processing', 'Completed'],
         colors: ['#2961CD', '#710886', '#1DC52E'],
-        height: 200
+        height: 200,
+        total: 100,
+        totallable: "Revenue"
     }
 
     const dataUserTable = {
@@ -447,6 +120,7 @@ const ComponentsDashboardFinance = () => {
     const datadash = {
         data: [290, 115, 270, 70, 30, 330, 100]
     }
+    const categories = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
     return (
         <div>
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -572,12 +246,12 @@ const ComponentsDashboardFinance = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <ComponentsChartsDonut title={'User overview'} data={dataUserOverview} />
+                    <ComponentsChartsDonut title={'User overview'} data={dataUserOverview} position="right" />
                     <ComponentsDatatablesBasic data={dataUserTable} />
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 my-5">
-                    <ComponentsChartsDonut title={'Revenue by orders'} data={dataRevenuebyorders} />
+                    <ComponentsChartsDonut title={'Revenue by orders'} data={dataRevenuebyorders} position='right' />
                     <div className="panel">
                         <p className='text-gray-700'>Average value of orders</p>
                         <div className="mt-5 flex items-center">
@@ -597,9 +271,19 @@ const ComponentsDashboardFinance = () => {
                         isHorizontal={false}
                         isVertical={true}
                         data={datadash.data}
+                        categories={categories}
                         title="Revenue"
                     />
                 </div>
+
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                    <ComponentsChartsDonut
+                        title={'Revenue by categories'}
+                        data={dataRevenuebycategories}
+                        position='bottom' />
+                    <ComponentsChartsDonut title={'Revenue by freelancer level'} data={dataRevenuebyfreelancerlevel} position='bottom' />
+                </div>
+
 
             </div>
         </div>

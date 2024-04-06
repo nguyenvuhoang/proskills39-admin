@@ -1,4 +1,4 @@
-import ComponentsDashboardFinance from '@/components/dashboard/components-dashboard-finance';
+import ComponentsDashboardHome from '@/components/dashboard/components-dashboard-home';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const Finance = () => {
-    return <ComponentsDashboardFinance />;
+    return <ComponentsDashboardHome />;
 };
 
 export default Finance;

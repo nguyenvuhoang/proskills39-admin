@@ -8,11 +8,14 @@ type PageProps = {
         series: number[]
         label: string[]
         colors: string[]
-        height: number
+        height: number,
+        total: number
+        totallable: string
     }
+    position: string
 }
 
-const ComponentsChartsDonut = ({ title, data }: PageProps) => {
+const ComponentsChartsDonut = ({ title, data, position }: PageProps) => {
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
         setIsMounted(true);
@@ -22,7 +25,7 @@ const ComponentsChartsDonut = ({ title, data }: PageProps) => {
         series: data.series,
         options: {
             chart: {
-                height: data.height ,
+                height: data.height,
                 type: 'donut',
                 zoom: {
                     enabled: false,
@@ -54,15 +57,17 @@ const ComponentsChartsDonut = ({ title, data }: PageProps) => {
                             total: {
                                 show: true,
                                 name: {
-                                    fontSize: '22px',
+                                    fontSize: '14px',
+                                    fontFamily: 'Quicksand',
                                 },
                                 value: {
-                                    fontSize: '16px',
+                                    fontSize: '12px',
                                 },
-                                formatter: function (w: any) {
+                                formatter: function () {
                                     // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                                    return w;
+                                    return data.total;
                                 },
+                                label: data.totallable
                             },
                         },
                     }
@@ -70,8 +75,16 @@ const ComponentsChartsDonut = ({ title, data }: PageProps) => {
                 },
             },
             legend: {
-                position: 'right',
+                position: position,
+                horizontalAlign: 'center',
+                itemMargin: {
+                    horizontal: 5,
+                    vertical: 5
+                }
             },
+            dataLabels: {
+                enabled: false
+            }
         },
     };
     return (

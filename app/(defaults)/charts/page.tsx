@@ -45,7 +45,7 @@ const Charts = () => {
                 </div>
 
                 <ComponentsChartsLine />
-                <ComponentsChartsArea />
+                <ComponentsChartsArea title={''} />
                 <ComponentsChartsColumn />
                 <ComponentsChartsColumnStacked />
                 <ComponentsChartsBar isHorizontal={false} isVertical={false} data={[]} title={''} />
@@ -56,8 +56,12 @@ const Charts = () => {
                     series: [],
                     label: [],
                     colors: [],
-                    height: 0
-                }} />
+                    height: 0,
+                    total: 0,
+                    totallable: ''
+                }} 
+                position=''
+                />
                 <ComponentsChartsPolarArea />
                 <ComponentsChartsRadialBar />
                 <ComponentsChartsBubble />

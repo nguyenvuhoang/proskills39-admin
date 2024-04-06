@@ -947,6 +947,7 @@ const ComponentsDashboardCrypto = () => {
                     </div>
                     {/*  selected chart  */}
                     <div className="flex-1 px-4">{isMounted && <ReactApexChart series={currentCoin.series} options={selectedBitCoinChart.options} type="line" height={411} width={'100%'} />}</div>
+                
                 </div>
             </div>
         </div>

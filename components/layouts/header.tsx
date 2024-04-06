@@ -1,39 +1,31 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Link from 'next/link';
-import { IRootState } from '@/store';
-import { toggleTheme, toggleSidebar, toggleRTL } from '@/store/themeConfigSlice';
 import Dropdown from '@/components/dropdown';
-import IconMenu from '@/components/icon/icon-menu';
-import IconCalendar from '@/components/icon/icon-calendar';
-import IconEdit from '@/components/icon/icon-edit';
-import IconChatNotification from '@/components/icon/icon-chat-notification';
-import IconSearch from '@/components/icon/icon-search';
-import IconXCircle from '@/components/icon/icon-x-circle';
-import IconSun from '@/components/icon/icon-sun';
-import IconMoon from '@/components/icon/icon-moon';
-import IconLaptop from '@/components/icon/icon-laptop';
-import IconMailDot from '@/components/icon/icon-mail-dot';
-import IconArrowLeft from '@/components/icon/icon-arrow-left';
-import IconInfoCircle from '@/components/icon/icon-info-circle';
 import IconBellBing from '@/components/icon/icon-bell-bing';
-import IconUser from '@/components/icon/icon-user';
-import IconMail from '@/components/icon/icon-mail';
+import IconCaretDown from '@/components/icon/icon-caret-down';
+import IconInfoCircle from '@/components/icon/icon-info-circle';
 import IconLockDots from '@/components/icon/icon-lock-dots';
 import IconLogout from '@/components/icon/icon-logout';
-import IconMenuDashboard from '@/components/icon/menu/icon-menu-dashboard';
-import IconCaretDown from '@/components/icon/icon-caret-down';
+import IconMail from '@/components/icon/icon-mail';
+import IconMenu from '@/components/icon/icon-menu';
+import IconSearch from '@/components/icon/icon-search';
+import IconUser from '@/components/icon/icon-user';
+import IconXCircle from '@/components/icon/icon-x-circle';
 import IconMenuApps from '@/components/icon/menu/icon-menu-apps';
 import IconMenuComponents from '@/components/icon/menu/icon-menu-components';
-import IconMenuElements from '@/components/icon/menu/icon-menu-elements';
+import IconMenuDashboard from '@/components/icon/menu/icon-menu-dashboard';
 import IconMenuDatatables from '@/components/icon/menu/icon-menu-datatables';
+import IconMenuElements from '@/components/icon/menu/icon-menu-elements';
 import IconMenuForms from '@/components/icon/menu/icon-menu-forms';
-import IconMenuPages from '@/components/icon/menu/icon-menu-pages';
 import IconMenuMore from '@/components/icon/menu/icon-menu-more';
-import { usePathname, useRouter } from 'next/navigation';
+import IconMenuPages from '@/components/icon/menu/icon-menu-pages';
 import { getTranslation } from '@/i18n';
+import { IRootState } from '@/store';
+import { toggleRTL, toggleSidebar } from '@/store/themeConfigSlice';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {
     const pathname = usePathname();
@@ -290,7 +282,7 @@ const Header = () => {
                                         </div>
                                     </li>
                                     <li>
-                                        <Link href="/users/profile" className="dark:hover:text-white">
+                                        <Link href="/users/user-dashboard" className="dark:hover:text-white">
                                             <IconUser className="h-4.5 w-4.5 shrink-0 ltr:mr-2 rtl:ml-2" />
                                             Profile
                                         </Link>
@@ -661,7 +653,7 @@ const Header = () => {
                                 </button>
                                 <ul className="absolute top-0 z-[10] hidden min-w-[180px] rounded bg-white p-0 py-2 text-dark shadow ltr:left-[95%] rtl:right-[95%] dark:bg-[#1b2e4b] dark:text-white-dark">
                                     <li>
-                                        <Link href="/users/profile">{t('profile')}</Link>
+                                        <Link href="/users/user-dashboard">{t('profile')}</Link>
                                     </li>
                                     <li>
                                         <Link href="/users/user-account-settings">{t('account_settings')}</Link>

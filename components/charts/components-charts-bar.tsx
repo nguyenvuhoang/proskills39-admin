@@ -10,8 +10,9 @@ type PageProps = {
     isVertical: boolean
     data: number[]
     title: string
+    categories: string[]
 }
-const ComponentsChartsBar = ({ isHorizontal, isVertical, data, title }: PageProps) => {
+const ComponentsChartsBar = ({ isHorizontal, isVertical, data, title, categories }: PageProps) => {
     const isDark = useSelector((state: IRootState) => state.themeConfig.theme === 'dark' || state.themeConfig.isDarkMode);
     const isRtl = useSelector((state: IRootState) => state.themeConfig.rtlClass) === 'rtl';
 
@@ -47,7 +48,7 @@ const ComponentsChartsBar = ({ isHorizontal, isVertical, data, title }: PageProp
             },
             colors: ['#4361ee'],
             xaxis: {
-                categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
+                categories: categories,
                 axisBorder: {
                     color: isDark ? '#191e3a' : '#e0e6ed',
                 },

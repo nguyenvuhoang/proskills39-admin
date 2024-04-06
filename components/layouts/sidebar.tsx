@@ -118,10 +118,10 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'users' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/users/profile">{t('user_dashboard')}</Link>
+                                            <Link href="/users/user-dashboard">{t('user_dashboard')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/users/user-account-settings">{t('user_list')}</Link>
+                                            <Link href="/users/user-list">{t('user_list')}</Link>
                                         </li>
                                         <li>
                                             <Link href="/users/freelancer-level">{t('freelancer_level')}</Link>
