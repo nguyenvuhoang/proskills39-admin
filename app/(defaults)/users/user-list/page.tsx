@@ -6,7 +6,47 @@ export const metadata: Metadata = {
     title: 'User list',
 };
 
+
+
 const UserList = () => {
+
+    const rowData = [
+        {
+            id: 1,
+            username: 'Anh Ben',
+            avatar: '/assets/images/profile-14.jpeg',
+            email: 'nguyenvuhoangz@gmail.com',
+            level: {
+                title: 'New expert',
+                iconlevel: '/assets/images/level/new-expert.png'
+            },
+            join: {
+                date: '2024-04-20',
+                time: '14:55 PM'
+            },
+            status: { tooltip: 'Active', color: 'success' },
+            rate: 5,
+            location: 'Vietnam'
+        },
+        {
+            id: 2,
+            username: 'Lena Le Thi',
+            avatar: '/assets/images/profile-14.jpeg',
+            email: 'capi@gmai.com',
+            level: {
+                title: 'New expert',
+                iconlevel: '/assets/images/level/new-expert.png'
+            },
+            join: {
+                date: '2024-04-20',
+                time: '14:55 PM'
+            },
+            status: { tooltip: 'InActive', color: 'danger' },
+            rate: 5,
+            location: 'Vietnam'
+        }
+    ];
+
     return (
         <div>
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -25,7 +65,7 @@ const UserList = () => {
 
             <div className="pt-5">
                 <div className="grid grid-cols-1 gap-6 my-5">
-                    <ComponentsDatatablesExport />
+                    <ComponentsDatatablesExport rowData = {rowData}/>
                 </div>
             </div>
         </div>
