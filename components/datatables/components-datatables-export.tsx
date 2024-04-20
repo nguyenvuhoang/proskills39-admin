@@ -9,7 +9,7 @@ import IconPrinter from '@/components/icon/icon-printer';
 const rowData = [
     {
         id: 1,
-        firstName: 'Caroline',
+        userName: 'Caroline',
         lastName: 'Jensen',
         email: 'carolinejensen@zidant.com',
         dob: '2004-05-28',
@@ -20,7 +20,7 @@ const rowData = [
     },
     {
         id: 2,
-        firstName: 'Celeste',
+        userName: 'Celeste',
         lastName: 'Grant',
         email: 'celestegrant@polarax.com',
         dob: '1989-11-19',
@@ -31,7 +31,7 @@ const rowData = [
     },
     {
         id: 3,
-        firstName: 'Tillman',
+        userName: 'Tillman',
         lastName: 'Forbes',
         email: 'tillmanforbes@manglo.com',
         dob: '2016-09-05',
@@ -42,7 +42,7 @@ const rowData = [
     },
     {
         id: 4,
-        firstName: 'Daisy',
+        userName: 'Daisy',
         lastName: 'Whitley',
         email: 'daisywhitley@applideck.com',
         dob: '1987-03-23',
@@ -53,7 +53,7 @@ const rowData = [
     },
     {
         id: 5,
-        firstName: 'Weber',
+        userName: 'Weber',
         lastName: 'Bowman',
         email: 'weberbowman@volax.com',
         dob: '1983-02-24',
@@ -64,7 +64,7 @@ const rowData = [
     },
     {
         id: 6,
-        firstName: 'Buckley',
+        userName: 'Buckley',
         lastName: 'Townsend',
         email: 'buckleytownsend@orbaxter.com',
         dob: '2011-05-29',
@@ -75,7 +75,7 @@ const rowData = [
     },
     {
         id: 7,
-        firstName: 'Latoya',
+        userName: 'Latoya',
         lastName: 'Bradshaw',
         email: 'latoyabradshaw@opportech.com',
         dob: '2010-11-23',
@@ -86,7 +86,7 @@ const rowData = [
     },
     {
         id: 8,
-        firstName: 'Kate',
+        userName: 'Kate',
         lastName: 'Lindsay',
         email: 'katelindsay@gorganic.com',
         dob: '1987-07-02',
@@ -97,7 +97,7 @@ const rowData = [
     },
     {
         id: 9,
-        firstName: 'Marva',
+        userName: 'Marva',
         lastName: 'Sandoval',
         email: 'marvasandoval@avit.com',
         dob: '2010-11-02',
@@ -117,7 +117,7 @@ const rowData = [
     },
     {
         id: 10,
-        firstName: 'Decker',
+        userName: 'Decker',
         lastName: 'Russell',
         email: 'deckerrussell@quilch.com',
         dob: '1994-04-21',
@@ -137,7 +137,7 @@ const rowData = [
     },
     {
         id: 11,
-        firstName: 'Odom',
+        userName: 'Odom',
         lastName: 'Mills',
         email: 'odommills@memora.com',
         dob: '2010-01-24',
@@ -157,7 +157,7 @@ const rowData = [
     },
     {
         id: 12,
-        firstName: 'Sellers',
+        userName: 'Sellers',
         lastName: 'Walters',
         email: 'sellerswalters@zorromop.com',
         dob: '1975-11-12',
@@ -177,7 +177,7 @@ const rowData = [
     },
     {
         id: 13,
-        firstName: 'Wendi',
+        userName: 'Wendi',
         lastName: 'Powers',
         email: 'wendipowers@orboid.com',
         dob: '1979-06-02',
@@ -197,7 +197,7 @@ const rowData = [
     },
     {
         id: 14,
-        firstName: 'Sophie',
+        userName: 'Sophie',
         lastName: 'Horn',
         email: 'sophiehorn@snorus.com',
         dob: '2018-09-20',
@@ -217,7 +217,7 @@ const rowData = [
     },
     {
         id: 15,
-        firstName: 'Levine',
+        userName: 'Levine',
         lastName: 'Rodriquez',
         email: 'levinerodriquez@xth.com',
         dob: '1973-02-08',
@@ -237,7 +237,7 @@ const rowData = [
     },
     {
         id: 16,
-        firstName: 'Little',
+        userName: 'Little',
         lastName: 'Hatfield',
         email: 'littlehatfield@comtract.com',
         dob: '2012-01-03',
@@ -257,7 +257,7 @@ const rowData = [
     },
     {
         id: 17,
-        firstName: 'Larson',
+        userName: 'Larson',
         lastName: 'Kelly',
         email: 'larsonkelly@zidant.com',
         dob: '2010-06-14',
@@ -277,7 +277,7 @@ const rowData = [
     },
     {
         id: 18,
-        firstName: 'Kendra',
+        userName: 'Kendra',
         lastName: 'Molina',
         email: 'kendramolina@sureplex.com',
         dob: '2002-07-19',
@@ -297,7 +297,7 @@ const rowData = [
     },
     {
         id: 19,
-        firstName: 'Ebony',
+        userName: 'Ebony',
         lastName: 'Livingston',
         email: 'ebonylivingston@danja.com',
         dob: '1994-10-18',
@@ -317,7 +317,7 @@ const rowData = [
     },
     {
         id: 20,
-        firstName: 'Kaufman',
+        userName: 'Kaufman',
         lastName: 'Rush',
         email: 'kaufmanrush@euron.com',
         dob: '2011-07-10',
@@ -337,7 +337,7 @@ const rowData = [
     },
     {
         id: 21,
-        firstName: 'Frank',
+        userName: 'Frank',
         lastName: 'Hays',
         email: 'frankhays@illumity.com',
         dob: '2005-06-15',
@@ -357,7 +357,7 @@ const rowData = [
     },
     {
         id: 22,
-        firstName: 'Carmella',
+        userName: 'Carmella',
         lastName: 'Mccarty',
         email: 'carmellamccarty@sybixtex.com',
         dob: '1980-03-06',
@@ -377,7 +377,7 @@ const rowData = [
     },
     {
         id: 23,
-        firstName: 'Massey',
+        userName: 'Massey',
         lastName: 'Owen',
         email: 'masseyowen@zedalis.com',
         dob: '2012-03-01',
@@ -397,7 +397,7 @@ const rowData = [
     },
     {
         id: 24,
-        firstName: 'Lottie',
+        userName: 'Lottie',
         lastName: 'Lowery',
         email: 'lottielowery@dyno.com',
         dob: '1982-10-10',
@@ -417,7 +417,7 @@ const rowData = [
     },
     {
         id: 25,
-        firstName: 'Addie',
+        userName: 'Addie',
         lastName: 'Luna',
         email: 'addieluna@multiflex.com',
         dob: '1988-05-01',
@@ -437,7 +437,7 @@ const rowData = [
     },
 ];
 
-const col = ['id', 'firstName', 'lastName', 'company', 'age', 'dob', 'email', 'phone'];
+const col = ['id', '', 'lastName', 'company', 'age', 'dob', 'email', 'phone'];
 
 const ComponentsDatatablesExport = () => {
     const [page, setPage] = useState(1);
@@ -467,7 +467,7 @@ const ComponentsDatatablesExport = () => {
             return rowData.filter((item: any) => {
                 return (
                     item.id.toString().includes(search.toLowerCase()) ||
-                    item.firstName.toLowerCase().includes(search.toLowerCase()) ||
+                    item.userName.toLowerCase().includes(search.toLowerCase()) ||
                     item.lastName.toLowerCase().includes(search.toLowerCase()) ||
                     item.company.toLowerCase().includes(search.toLowerCase()) ||
                     item.email.toLowerCase().includes(search.toLowerCase()) ||
@@ -633,19 +633,29 @@ const ComponentsDatatablesExport = () => {
                     className="table-hover whitespace-nowrap"
                     records={recordsData}
                     columns={[
-                        { accessor: 'id', title: '#', sortable: true },
-                        { accessor: 'firstName', sortable: true },
-                        { accessor: 'lastName', sortable: true },
-                        { accessor: 'company', title: 'Company', sortable: true },
-                        { accessor: 'age', title: 'Age', sortable: true },
+                        {
+                            accessor: 'id',
+                            title: '#',
+                            sortable: true,
+                            render: ({ id }) => (
+                                <span>
+                                    #{id}
+                                </span>
+                            )
+                        },
+                        { accessor: 'userName', sortable: true },
+                        { accessor: 'level', sortable: true },
+                        { accessor: 'joinDate', title: 'Company', sortable: true },
+                        { accessor: 'status', title: 'Age', sortable: true },
                         {
                             accessor: 'dob',
                             title: 'Start Date',
                             sortable: true,
                             render: ({ dob }) => <div>{formatDate(dob)}</div>,
                         },
-                        { accessor: 'email', sortable: true },
-                        { accessor: 'phone', sortable: true },
+                        { accessor: 'rate', sortable: true },
+                        { accessor: 'location', sortable: true },
+                        { accessor: 'feature', sortable: true },
                     ]}
                     totalRecords={initialRecords.length}
                     recordsPerPage={pageSize}
