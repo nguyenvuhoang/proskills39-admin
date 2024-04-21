@@ -148,7 +148,7 @@ const Sidebar = () => {
                                             <Link href="/finance/finance-dashboard">{t('finance_dashboard')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/pages/contact-us-boxed" target="_blank">
+                                            <Link href="/finance/managed-service-fee">
                                                 {t('manage-service-fee')}
                                             </Link>
                                         </li>
@@ -171,7 +171,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'auth' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/order/order-dashboard" target="_blank">
+                                            <Link href="/order">
                                                 {t('order_dashboard')}
                                             </Link>
                                         </li>
@@ -227,7 +227,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'job' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/job/job-dashboard" target="_blank">
+                                            <Link href="/job">
                                                 {t('job_dashboard')}
                                             </Link>
                                         </li>

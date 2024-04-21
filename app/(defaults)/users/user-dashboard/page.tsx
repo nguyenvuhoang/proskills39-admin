@@ -210,7 +210,7 @@ const UserDashboard = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 my-5">
-                    <ComponentsDatatablesExport />
+                    <ComponentsDatatablesExport rowData={undefined} />
                 </div>
 
 

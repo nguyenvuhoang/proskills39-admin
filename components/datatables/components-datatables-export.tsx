@@ -40,7 +40,7 @@ const ComponentsDatatablesExport = ({ rowData }: PageProps) => {
 
     useEffect(() => {
         setInitialRecords(() => {
-            return rowData.filter((item: any) => {
+            return rowData?.filter((item: any) => {
                 return (
                     item.id.toString().includes(search.toLowerCase()) ||
                     item.username.toLowerCase().includes(search.toLowerCase()) ||

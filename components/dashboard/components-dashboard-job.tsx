@@ -9,8 +9,9 @@ import IconTrendingUp from '../icon/icon-trending-up';
 import IconUser from '../icon/icon-user';
 import IconUsers from '../icon/icon-users';
 import IconWallet from '../icon/icon-wallet';
+import ComponentsChartsBar from '../charts/components-charts-bar';
 
-const ComponentsDashboardHome = () => {
+const ComponentsDashboardJob = () => {
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
         setIsMounted(true);
@@ -112,16 +113,14 @@ const ComponentsDashboardHome = () => {
         ],
         title: "Top categories"
     }
-
+    const data = [3700, 2478, 1300, 1300, 500, 1500, 3200, 4300, 800, 2400]
     const isRtl = useSelector((state: IRootState) => state.themeConfig.rtlClass) === 'rtl';
-    const datadash = {
-        data: [290, 115, 270, 70, 30, 330, 100]
-    }
-    const categories = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
+
+    const categories = ['Programming & Tech', 'Graphics & Design', 'Digital Marketing', 'Writing & Translation', 'Lifestyle', 'Video & Animation', 'Music & Audio', 'Business', 'Trending','AI Service']
     return (
         <div>
             <div className="flex flex-wrap items-center justify-between gap-4">
-                <h2 className="text-xl">Finance dashboard</h2>
+                <h2 className="text-xl">Job dashboard</h2>
                 <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center sm:gap-3">
                     <div className="flex gap-3">
                         <div className="dropdown">
@@ -158,85 +157,14 @@ const ComponentsDashboardHome = () => {
                 </div>
             </div>
             <div className="pt-5">
-                <div className="panel my-5">
-                    <h3 className="text-xl">Total balance</h3>
-                    <p>8000 v2p</p>
-
-                    <div className="my-6 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-3">
-                        {/* Balance */}
-                        <div className="panel ">
-                            <div className="flex justify-between">
-                                <div className='flex flex-wrap'>
-                                    <IconWallet className='text-gray-600 bg-gray-300 w-8 h-8 rounded-full p-2'></IconWallet>
-                                    <div className="text-md font-semibold ltr:mr-1 rtl:ml-1 text-gray-600 p-2">Balance</div>
-                                </div>
-
-                            </div>
-                            <div className="mt-5 flex items-center">
-                                <div className="text-3xl text-gray-600 font-bold ltr:mr-3 rtl:ml-3"> 7000 v2p </div>
-                            </div>
-                            <div className="flex items-center text-gray-600 mt-2  justify-between text-base font-bold">
-                                In this month
-                                <span className="flex text-sm font-normal text-success bg-green-100 rounded-full p-1">
-                                    <IconTrendingUp className='mx-2' />
-                                    10%
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Client's hold amount */}
-                        <div className="panel">
-                            <div className="flex justify-between">
-
-                                <div className='flex flex-wrap'>
-                                    <IconUser className='text-gray-600 bg-gray-300 w-8 h-8 rounded-full p-2' />
-                                    <div className="text-md font-semibold ltr:mr-1 rtl:ml-1 text-gray-600 p-2">Client&rsquo;s hold amount</div>
-                                </div>
-
-                            </div>
-                            <div className="mt-5 flex items-center">
-                                <div className="text-3xl text-gray-600 font-bold ltr:mr-3 rtl:ml-3"> 500 v2p</div>
-                            </div>
-                            <div className="flex items-center text-gray-600 mt-2  justify-between text-base font-bold">
-                                In this month
-                                <span className="flex text-sm font-normal text-success bg-green-100 rounded-full p-1">
-                                    <IconTrendingUp className='mx-2' />
-                                    10%
-                                </span>
-                            </div>
-                        </div>
-
-                        {/*  Freelance's hold amount */}
-                        <div className="panel">
-                            <div className="flex justify-between">
-
-                                <div className='flex flex-wrap'>
-                                    <IconUsers className='text-gray-600 bg-gray-300 w-8 h-8 rounded-full p-2' />
-                                    <div className="text-md font-semibold ltr:mr-1 rtl:ml-1 text-gray-600 p-2">Freelance&rsquo;s hold amount</div>
-                                </div>
-
-                            </div>
-                            <div className="mt-5 flex items-center">
-                                <div className="text-3xl text-gray-600 font-bold ltr:mr-3 rtl:ml-3"> 500 v2p </div>
-                            </div>
-                            <div className="flex items-center text-gray-600 mt-2  justify-between text-base font-bold">
-                                In this month
-                                <span className="flex text-sm font-normal text-success bg-green-100 rounded-full p-1">
-                                    <IconTrendingUp className='mx-2' />
-                                    10%
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <ComponentsChartsDonut
-                        title={'Revenue by categories'}
-                        data={dataRevenuebycategories}
-                        position='bottom' />
-                    <ComponentsChartsDonut title={'Revenue by freelancer level'} data={dataRevenuebyfreelancerlevel} position='bottom' />
+                <div className="grid grid-cols-1 gap-6 my-5">
+                    <ComponentsChartsBar
+                        isHorizontal={false}
+                        isVertical={true}
+                        data={data}
+                        categories={categories}
+                        title="User count by Level"
+                    />
                 </div>
 
 
@@ -245,4 +173,4 @@ const ComponentsDashboardHome = () => {
     );
 };
 
-export default ComponentsDashboardHome;
+export default ComponentsDashboardJob;
