@@ -23,7 +23,8 @@ const Basic = () => {
                 title: '',
                 pageSize: [],
                 column: [],
-                rowData: []
+                rowData: [],
+                showFooter: true
             }} />
         </div>
     );

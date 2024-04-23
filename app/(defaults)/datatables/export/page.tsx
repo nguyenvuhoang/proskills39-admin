@@ -19,7 +19,7 @@ const Export = () => {
                     https://www.npmjs.com/package/mantine-datatable
                 </a>
             </div>
-            <ComponentsDatatablesExport />
+            <ComponentsDatatablesExport rowData={undefined} />
         </div>
     );
 };

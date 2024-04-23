@@ -113,7 +113,8 @@ const ComponentsDashboardFinance = () => {
                 revenue: "1.517 v2p"
             }
         ],
-        title: "Top categories"
+        title: "Top categories",
+        showFooter: false
     }
 
     const isRtl = useSelector((state: IRootState) => state.themeConfig.rtlClass) === 'rtl';
